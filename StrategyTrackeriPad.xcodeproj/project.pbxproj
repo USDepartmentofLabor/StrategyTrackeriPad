@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D2AC8691638310B00C340E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2AC8681638310B00C340E5 /* UIKit.framework */; };
+		3D2AC86B1638310B00C340E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2AC86A1638310B00C340E5 /* Foundation.framework */; };
+		3D2AC86D1638310B00C340E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2AC86C1638310B00C340E5 /* CoreGraphics.framework */; };
+		3D2AC8731638310B00C340E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D2AC8711638310B00C340E5 /* InfoPlist.strings */; };
+		3D2AC8751638310B00C340E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AC8741638310B00C340E5 /* main.m */; };
+		3D2AC8791638310B00C340E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AC8781638310B00C340E5 /* AppDelegate.m */; };
+		3D2AC87C1638310B00C340E5 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AC87B1638310B00C340E5 /* MasterViewController.m */; };
+		3D2AC87F1638310B00C340E5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AC87E1638310B00C340E5 /* DetailViewController.m */; };
+		3D2AC8821638310B00C340E5 /* MasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2AC8801638310B00C340E5 /* MasterViewController_iPhone.xib */; };
+		3D2AC8851638310B00C340E5 /* MasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2AC8831638310B00C340E5 /* MasterViewController_iPad.xib */; };
+		3D2AC8881638310B00C340E5 /* DetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2AC8861638310B00C340E5 /* DetailViewController_iPhone.xib */; };
+		3D2AC88B1638310B00C340E5 /* DetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D2AC8891638310B00C340E5 /* DetailViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D2AC8641638310B00C340E5 /* StrategyTrackeriPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StrategyTrackeriPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D2AC8681638310B00C340E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D2AC86A1638310B00C340E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D2AC86C1638310B00C340E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D2AC8701638310B00C340E5 /* StrategyTrackeriPad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StrategyTrackeriPad-Info.plist"; sourceTree = "<group>"; };
+		3D2AC8721638310B00C340E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D2AC8741638310B00C340E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D2AC8761638310B00C340E5 /* StrategyTrackeriPad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StrategyTrackeriPad-Prefix.pch"; sourceTree = "<group>"; };
+		3D2AC8771638310B00C340E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3D2AC8781638310B00C340E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3D2AC87A1638310B00C340E5 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		3D2AC87B1638310B00C340E5 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		3D2AC87D1638310B00C340E5 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3D2AC87E1638310B00C340E5 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3D2AC8811638310B00C340E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPhone.xib; sourceTree = "<group>"; };
+		3D2AC8841638310B00C340E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController_iPad.xib; sourceTree = "<group>"; };
+		3D2AC8871638310B00C340E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		3D2AC88A1638310B00C340E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D2AC8611638310B00C340E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2AC8691638310B00C340E5 /* UIKit.framework in Frameworks */,
+				3D2AC86B1638310B00C340E5 /* Foundation.framework in Frameworks */,
+				3D2AC86D1638310B00C340E5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D2AC8591638310B00C340E5 = {
+			isa = PBXGroup;
+			children = (
+				3D2AC86E1638310B00C340E5 /* StrategyTrackeriPad */,
+				3D2AC8671638310B00C340E5 /* Frameworks */,
+				3D2AC8651638310B00C340E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D2AC8651638310B00C340E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D2AC8641638310B00C340E5 /* StrategyTrackeriPad.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D2AC8671638310B00C340E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D2AC8681638310B00C340E5 /* UIKit.framework */,
+				3D2AC86A1638310B00C340E5 /* Foundation.framework */,
+				3D2AC86C1638310B00C340E5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D2AC86E1638310B00C340E5 /* StrategyTrackeriPad */ = {
+			isa = PBXGroup;
+			children = (
+				3D2AC8771638310B00C340E5 /* AppDelegate.h */,
+				3D2AC8781638310B00C340E5 /* AppDelegate.m */,
+				3D2AC87A1638310B00C340E5 /* MasterViewController.h */,
+				3D2AC87B1638310B00C340E5 /* MasterViewController.m */,
+				3D2AC87D1638310B00C340E5 /* DetailViewController.h */,
+				3D2AC87E1638310B00C340E5 /* DetailViewController.m */,
+				3D2AC8801638310B00C340E5 /* MasterViewController_iPhone.xib */,
+				3D2AC8831638310B00C340E5 /* MasterViewController_iPad.xib */,
+				3D2AC8861638310B00C340E5 /* DetailViewController_iPhone.xib */,
+				3D2AC8891638310B00C340E5 /* DetailViewController_iPad.xib */,
+				3D2AC86F1638310B00C340E5 /* Supporting Files */,
+			);
+			path = StrategyTrackeriPad;
+			sourceTree = "<group>";
+		};
+		3D2AC86F1638310B00C340E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D2AC8701638310B00C340E5 /* StrategyTrackeriPad-Info.plist */,
+				3D2AC8711638310B00C340E5 /* InfoPlist.strings */,
+				3D2AC8741638310B00C340E5 /* main.m */,
+				3D2AC8761638310B00C340E5 /* StrategyTrackeriPad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D2AC8631638310B00C340E5 /* StrategyTrackeriPad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D2AC88E1638310B00C340E5 /* Build configuration list for PBXNativeTarget "StrategyTrackeriPad" */;
+			buildPhases = (
+				3D2AC8601638310B00C340E5 /* Sources */,
+				3D2AC8611638310B00C340E5 /* Frameworks */,
+				3D2AC8621638310B00C340E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StrategyTrackeriPad;
+			productName = StrategyTrackeriPad;
+			productReference = 3D2AC8641638310B00C340E5 /* StrategyTrackeriPad.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D2AC85B1638310B00C340E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "U.S. Department of Labor";
+			};
+			buildConfigurationList = 3D2AC85E1638310B00C340E5 /* Build configuration list for PBXProject "StrategyTrackeriPad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D2AC8591638310B00C340E5;
+			productRefGroup = 3D2AC8651638310B00C340E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D2AC8631638310B00C340E5 /* StrategyTrackeriPad */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D2AC8621638310B00C340E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2AC8731638310B00C340E5 /* InfoPlist.strings in Resources */,
+				3D2AC8821638310B00C340E5 /* MasterViewController_iPhone.xib in Resources */,
+				3D2AC8851638310B00C340E5 /* MasterViewController_iPad.xib in Resources */,
+				3D2AC8881638310B00C340E5 /* DetailViewController_iPhone.xib in Resources */,
+				3D2AC88B1638310B00C340E5 /* DetailViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D2AC8601638310B00C340E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D2AC8751638310B00C340E5 /* main.m in Sources */,
+				3D2AC8791638310B00C340E5 /* AppDelegate.m in Sources */,
+				3D2AC87C1638310B00C340E5 /* MasterViewController.m in Sources */,
+				3D2AC87F1638310B00C340E5 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D2AC8711638310B00C340E5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D2AC8721638310B00C340E5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D2AC8801638310B00C340E5 /* MasterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D2AC8811638310B00C340E5 /* en */,
+			);
+			name = MasterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3D2AC8831638310B00C340E5 /* MasterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D2AC8841638310B00C340E5 /* en */,
+			);
+			name = MasterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		3D2AC8861638310B00C340E5 /* DetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D2AC8871638310B00C340E5 /* en */,
+			);
+			name = DetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3D2AC8891638310B00C340E5 /* DetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D2AC88A1638310B00C340E5 /* en */,
+			);
+			name = DetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D2AC88C1638310B00C340E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D2AC88D1638310B00C340E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D2AC88F1638310B00C340E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StrategyTrackeriPad/StrategyTrackeriPad-Prefix.pch";
+				INFOPLIST_FILE = "StrategyTrackeriPad/StrategyTrackeriPad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D2AC8901638310B00C340E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StrategyTrackeriPad/StrategyTrackeriPad-Prefix.pch";
+				INFOPLIST_FILE = "StrategyTrackeriPad/StrategyTrackeriPad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D2AC85E1638310B00C340E5 /* Build configuration list for PBXProject "StrategyTrackeriPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D2AC88C1638310B00C340E5 /* Debug */,
+				3D2AC88D1638310B00C340E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D2AC88E1638310B00C340E5 /* Build configuration list for PBXNativeTarget "StrategyTrackeriPad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D2AC88F1638310B00C340E5 /* Debug */,
+				3D2AC8901638310B00C340E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D2AC85B1638310B00C340E5 /* Project object */;
+}
