@@ -3,7 +3,7 @@
 //  StrategyTrackeriPad
 //
 //  Created by Michael Pulsifer on 10/24/12.
-//  Copyright (c) 2012 U.S. Department of Labor. All rights reserved.
+//  Code available in the public domain
 //
 
 #import "DetailViewController.h"
