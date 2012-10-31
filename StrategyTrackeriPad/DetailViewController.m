@@ -8,7 +8,6 @@
 
 #import "DetailViewController.h"
 #import "MilestoneCell.h"
-#import "SubMilestoneCell.h"
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
