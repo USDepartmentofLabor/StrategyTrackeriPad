@@ -7,11 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GOVDataRequest.h"
+#import "GOVDataContext.h"
 
-@interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface DetailViewController : UITableViewController <UISplitViewControllerDelegate, GOVDataRequestDelegate>
+{
+    NSArray *arrayOfMilestones;
+    NSDictionary *dictionaryOfMilestones;
+    
+    GOVDataRequest *dataRequest;
 
+}
 @property (strong, nonatomic) id detailItem;
 
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, retain) NSArray *arrayOfMilestones;
+@property (nonatomic, retain) GOVDataRequest *dataRequest;
+@property (nonatomic, retain) NSDictionary *dictionaryOfMilestones;
+
+-(void)govDataRequest:(GOVDataRequest *)request didCompleteWithDictionaryResults:(NSDictionary *)resultsDictionary;
+-(void)govDataRequest:(GOVDataRequest *)request didCompleteWithResults:(NSArray *)resultsArray;
+-(void)govDataRequest:(GOVDataRequest *)request didCompleteWithError:(NSString *)error;
+
 
 @end
+

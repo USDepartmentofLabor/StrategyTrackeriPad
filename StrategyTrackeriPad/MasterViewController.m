@@ -10,18 +10,25 @@
 
 #import "DetailViewController.h"
 
+#define API_KEY @""
+#define API_SECRET @""
+#define API_HOST @"https://raw.github.com"
+#define API_URL @"/GSA/digital-strategy/1"
+
 @interface MasterViewController () {
     NSMutableArray *_objects;
 }
 @end
 
 @implementation MasterViewController
+@synthesize dataRequest, arrayOfAgencies, dictionaryOfAgencies;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Master", @"Master");
+        self.title = NSLocalizedString(@"Agencies", @"Agencies");
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
             self.clearsSelectionOnViewWillAppear = NO;
             self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
@@ -40,11 +47,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    GOVDataContext *context = [[GOVDataContext alloc] initWithAPIKey:API_KEY Host:API_HOST SharedSecret:API_SECRET APIURL:API_URL];
+    
+    dataRequest = [[GOVDataRequest alloc] initWithContext:context];
+    
+    dataRequest.delegate = self;
+    
+    NSString *method = @"agencies.json";
+    
+    NSDictionary *arguments = [NSDictionary dictionaryWithObjectsAndKeys:nil];
+    
+    int timeOut = 20;
+    
+    [dataRequest callAPIMethod:method withArguments:arguments andTimeOut:timeOut];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    /*self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
     UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
-    self.navigationItem.rightBarButtonItem = addButton;
+    self.navigationItem.rightBarButtonItem = addButton;*/
 }
 
 - (void)viewDidUnload
@@ -81,12 +104,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    NSLog(@"agency count = %d", [arrayOfAgencies count]);
+    return [self.arrayOfAgencies count];
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary *result = (NSDictionary *)[arrayOfAgencies objectAtIndex:indexPath.row];
+
+  
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -96,11 +123,14 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
     }
-
-
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [object description];
+  
+    NSLog(@"Agency = %@", result);
+    NSLog(@"Agency ID = %@", [result objectForKey:@"id"]);
+    
+    
+    cell.textLabel.text = (NSString *)[result objectForKey:@"id"];
     return cell;
+    
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,7 +167,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
+   // NSLog(@"%@", [[arrayOfAgencies objectAtIndex:indexPath.row] objectForKey:@"url"]);
+    NSString *object = [[arrayOfAgencies objectAtIndex:indexPath.row] objectForKey:@"url"];
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
 	    if (!self.detailViewController) {
 	        self.detailViewController = [[[DetailViewController alloc] initWithNibName:@"DetailViewController_iPhone" bundle:nil] autorelease];
@@ -147,6 +178,32 @@
     } else {
         self.detailViewController.detailItem = object;
     }
+}
+
+# pragma mark - GovDataSDK
+
+-(void)govDataRequest:(GOVDataRequest *)request didCompleteWithDictionaryResults:(NSDictionary *)resultsDictionary {
+//    NSLog(@"Got a Dictionary");
+    self.arrayOfAgencies = [[resultsDictionary objectForKey:@"agencies"] retain];
+    
+//    NSLog(@"%@", arrayOfAgencies);
+    [self.tableView reloadData];
+    
+}
+
+-(void)govDataRequest:(GOVDataRequest *)request didCompleteWithResults:(NSArray *)resultsArray {
+    NSLog(@"Got an array back");
+    
+    self.arrayOfAgencies = [resultsArray retain];
+    
+    [self.tableView reloadData];
+}
+
+-(void)govDataRequest:(GOVDataRequest *)request didCompleteWithError:(NSString *)error {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:error delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+    
+    [alert show];
+    [alert release];
 }
 
 @end
